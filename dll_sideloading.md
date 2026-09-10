@@ -54,8 +54,7 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f raw -b "\x00" -o shellcode.update
 Также передаем наш `payload` в директорию с *DLL*
 
 После передачи файла можно использовать `SharpDLLProxy.exe` для сборки прокси-DLL:
-![](<data/Pasted image 20260907141011.png>)   
-
+![](<data/Pasted image 20260907141011.png>)                                                    
 (рис. 3)
 
 В результате получаем 2 файла:
@@ -72,8 +71,7 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f raw -b "\x00" -o shellcode.update
 (рис. 4)
 
 Затем она читает наш пейлоад и выполняет его:
-![](<data/Pasted image 20260907142240.png>)   
-
+![](<data/Pasted image 20260907142240.png>)                                                  
 (рис. 5)
 
 После сборки мы получаем `bcrypt.dll`. Теперь все необходимые компоненты готовы — переходим к эксплуатации.
@@ -87,6 +85,5 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f raw -b "\x00" -o shellcode.update
 - `shellcode.update` — шеллкод пейлоада
 
 После перемещения файлов запускаем `GUP.exe` и наблюдаем выполнение нашей нагрузки:
-![](<data/Pasted image 20260907142657.png>)   
-
+![](<data/Pasted image 20260907142657.png>)                                                         
 (рис. 6)
